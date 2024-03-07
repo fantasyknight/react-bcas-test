@@ -9,15 +9,11 @@ https://www.loom.com/share/f0f8d2c4b2544ceb9ca1027c32be2f63
 
 ## Step to Run
 ### with yarn
-yarn install: install dependencies
-
-yarn start : run in a dev environment
-
+yarn install: install dependencies<br/>
+yarn start : run in a dev environment<br/>
 yarn build: build a project
 
 ### with npm
-npm install: install dependencies
-
-npm start: run in a dev environment
-
+npm install: install dependencies<br/>
+npm start: run in a dev environment<br/>
 npm build: build a project
