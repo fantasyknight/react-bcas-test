@@ -1,0 +1,174 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.search-page {
+  background: url("../public/images/search-back.jpg");
+  background-size: cover;
+}
+
+.btn-search-wrapper {
+  position: relative;
+  margin-top: 64px;
+  width: 100%;
+  border-radius: 56px;
+}
+
+.btn-search-wrapper:hover span,
+.btn-search-wrapper:hover svg {
+  transition: all .25s;
+}
+
+.main-wrapper {
+  max-width: 700px;
+}
+
+.btn-search-wrapper::before,
+.btn-search-wrapper::after {
+  background: url("../public/images/search-gradient.png");
+  background-origin: border-box;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+}
+
+.btn-search-wrapper::before {
+  backdrop-filter: blur(3.5px);
+  border: 3px solid #ffffff4d;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+}
+
+.btn-search-wrapper::after {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  bottom: 0;
+  filter: blur(0);
+  left: 0;
+  opacity: .6;
+  right: 0;
+  top: 0;
+  transform: translateZ(0);
+  transition: .4s;
+  will-change: transform;
+}
+
+.btn-search-wrapper:hover::after {
+  filter: blur(20px);
+}
+
+.btn-gradient {
+  position: relative;
+  padding: 24px 32px;
+  align-items: center;
+  background: #000;
+  border: none;
+  border-radius: inherit;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  outline: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-overlay {
+  background-color: rgba();
+}
+
+
+.nice-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+/* Handle */
+.nice-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  /* color of the scroll thumb */
+  border-radius: 6px;
+  /* roundness of the scroll thumb */
+}
+
+/* Handle on hover */
+.nice-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* color of the scroll thumb when hovered */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #161a26;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-container__header {
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 32px;
+  text-align: center;
+  color: white;
+}
+
+.app-container__body {
+  display: flex;
+  height: 50%;
+}
+
+.app-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.app-widget-chart {
+  min-width: 400px;
+  height: 100%;
+}
+
+.header-link {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.header-link::after {
+  content: '';
+  display: block;
+  margin-top: 2px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  transition: all .35s;
+}
+
+.header-link.active::after,
+.header-link:hover::after {
+  transform: scaleX(100%);
+}
